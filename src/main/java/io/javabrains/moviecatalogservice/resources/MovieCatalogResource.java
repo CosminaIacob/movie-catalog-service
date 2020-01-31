@@ -1,6 +1,5 @@
 package io.javabrains.moviecatalogservice.resources;
 
-import com.netflix.discovery.DiscoveryClient;
 import io.javabrains.moviecatalogservice.models.CatalogItem;
 import io.javabrains.moviecatalogservice.models.Movie;
 import io.javabrains.moviecatalogservice.models.Rating;
@@ -25,8 +24,8 @@ public class MovieCatalogResource {
     @Autowired
     private WebClient.Builder webClientBuilder; // is an alternative to rest template
 
-    @Autowired
-    private DiscoveryClient discoveryClient;
+//    @Autowired
+//    private DiscoveryClient discoveryClient;
 
     @RequestMapping("/{userId}")
     public List<CatalogItem> getCatalog(@PathVariable("userId") String userId) {
